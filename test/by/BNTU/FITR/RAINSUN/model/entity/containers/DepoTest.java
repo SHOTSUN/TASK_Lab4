@@ -29,7 +29,7 @@ public class DepoTest {
         Train train = new Train();
         instance.add(train);
         int expresult = 1;
-        assertEquals(expresult, instance.get().size());
+        assertEquals(expresult, instance.getDepo().size());
 
     }
 
@@ -38,7 +38,7 @@ public class DepoTest {
         System.out.println("getTrain");
         Train train = new Train();
         instance.add(train);
-        Train result = instance.get().pick();
+        Train result = instance.getDepo().pick();
         assertEquals(result, train);
     }
 

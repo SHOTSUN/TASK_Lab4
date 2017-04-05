@@ -30,9 +30,9 @@ public class Creator {
         for (int i = 0; i < n-1; i++) {
             int buf = myRandom.nextInt(n);
             if (buf % 2 == 0) {
-                train.add(new Armored(15 + myRandom.nextInt(40), myRandom.nextInt(300)));
+                train.add(new Armored(15 + myRandom.nextInt(40), 10 + myRandom.nextInt(40), myRandom.nextInt(300)));
             } else {
-                train.add(new Simple(15 + myRandom.nextInt(40), 1 + myRandom.nextInt(5)));
+                train.add(new Simple(15 + myRandom.nextInt(40), 10 + myRandom.nextInt(40), 1 + myRandom.nextInt(5)));
             }
 
         }

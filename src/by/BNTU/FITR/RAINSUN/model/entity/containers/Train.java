@@ -43,9 +43,17 @@ public class Train implements Iterable<Coach>{
 
     @Override
     public String toString() {
+        
+        int rez =0;
+        
+        for(Coach c: train){
+            rez += c.getWeight();
+        }
 
         StringBuilder showBag = new StringBuilder();
-
+        
+        showBag.append("\n\t").append(rez).append(" - Train weight\n");
+            
         for (Coach thing : train) {
             showBag.append(thing.toString()).append("\n");
         }

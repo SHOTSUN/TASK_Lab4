@@ -9,8 +9,8 @@ public class Simple extends Coach {
         this.cargoType = 0;
     }
 
-    public Simple(int weight, int cargoType) {
-        super(weight);
+    public Simple(int weight, int length, int cargoType) {
+        super(weight, length);
         this.cargoType = cargoType;
     }
 

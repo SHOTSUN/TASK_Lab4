@@ -10,8 +10,8 @@ public class Armored extends Coach {
 
     }
 
-    public Armored(int weight, int armor) {
-        super(weight);
+    public Armored(int weight, int length, int armor) {
+        super(weight, length);
         this.armor = armor;
 
     }

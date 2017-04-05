@@ -3,7 +3,8 @@ package by.BNTU.FITR.RAINSUN.model.entity.trains;
 public class Coach implements Comparable<Coach> {
 
     private int weight;
-
+    private int length;
+    
     public Coach() {
     }
 
@@ -15,11 +16,12 @@ public class Coach implements Comparable<Coach> {
         }
     }
 
-    public Coach(int weight) {
-        if (weight > 0) {
+    public Coach(int weight, int length) {
+        if (weight > 0 && length > 0) {
             this.weight = weight;
+            this.length = length;
         } else {
-            throwError(0, "Weight must be > 0");
+            throwError(0, "Weight or length must be > 0");
         }
     }
 
@@ -35,9 +37,21 @@ public class Coach implements Comparable<Coach> {
         }
     }
 
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        if (length > 0) {
+            this.length = length;
+        } else {
+            throwError(0, "Length must be > 0");
+        }
+    }
+    
     @Override
     public String toString() {
-        return "weight = " + this.weight + ";";
+        return "weight = " + this.weight + ", length = " + this.length + ";";
     }
     
     @Override
