@@ -38,16 +38,16 @@ public class TrainTest {
         System.out.println("getTrain");
         Coach coach = new Coach();
         instance.add(coach);
-        Coach result = instance.get().pick();
+        Coach result = instance.get().get(0);
         assertEquals(coach, result);
     }
 
     @Test
     public void testToString() {
         System.out.println("toString");
-        String expResult = "weight = 0;\n";
+        String expResult = "\n\t0 - Train weight\nweight = 0, length = 0;\n";
         instance.add(new Coach());
-        assertEquals(expResult, instance.toString(), expResult);
+        assertEquals(expResult, instance.toString());
     }
 
 }

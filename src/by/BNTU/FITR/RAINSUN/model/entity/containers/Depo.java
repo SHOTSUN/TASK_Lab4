@@ -1,9 +1,9 @@
 package by.BNTU.FITR.RAINSUN.model.entity.containers;
 
-import java.util.AbstractCollection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import by.BNTU.FITR.RAINSUN.model.exceptions.NoElementException;
 
 /**
  * @author SHOTSUN
@@ -38,6 +38,15 @@ public class Depo implements Iterable<Train> {
     
     public List<Train> getDepo() {
         return depo;
+    }
+    
+    public Train getTrain(int index) throws NoElementException {
+        try{
+            return depo.get(index);
+        }catch(IndexOutOfBoundsException e){
+            throw new NoElementException(e.toString());
+        }
+        
     }
 
     public void add(Train... trains) {

@@ -6,29 +6,25 @@ import by.BNTU.FITR.RAINSUN.model.entity.containers.Depo;
 import by.BNTU.FITR.RAINSUN.model.entity.containers.Train;
 import java.util.Collections;
 
-
 public class Sorter {
-    
-    enum Season { WEIGHT, LENGTH }
-    
-    public static void sortTrain(Train train, int s) {
-        
-        if(s == 1){
+
+    public static void sortTrain(Train train, Types type) {
+
+        if (type == Types.BY_WEIGHT) {
             Collections.sort(train.get());
-        }
-        else if(s == 2){
+        } else if (type == Types.BY_LENGTH) {
             Collections.sort(train.get(), new CoachLengthComparator());
         }
-        
 
     }
-    
+
     public static void sortDepo(Depo depo, TrainComparator trainComp) {
-        
-        
+
         Collections.sort(depo.getDepo(), trainComp);
 
     }
-        
+    public enum Types {
+        BY_LENGTH, BY_WEIGHT
+    }
 
 }

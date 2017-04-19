@@ -34,19 +34,20 @@ public class DepoTest {
     }
 
     @Test
-    public void testGet() throws ExistenceException{
+    public void testGet() throws ExistenceException {
         System.out.println("getTrain");
         Train train = new Train();
         instance.add(train);
-        Train result = instance.getDepo().pick();
+        Train result = instance.getDepo().get(0);
         assertEquals(result, train);
     }
 
     @Test
     public void testToString() {
         System.out.println("toString");
-        instance.add(new Train(new Coach(10)));
-        String expResult = "\n\tTrains:\nweight = 10;\n";
+        instance.add(new Train(new Coach(10, 20)));
+        String expResult = "\n\tTrains:\n\n\t10 - Train weight\nweight = 10, "
+                + "length = 20;\n";
         assertEquals(instance.toString(), expResult);
     }
 

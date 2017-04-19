@@ -35,7 +35,7 @@ public class CounterTest {
         Train train1 = new Train();
         Train train2 = new Train();
         
-        Coach coach = new Coach(10);
+        Coach coach = new Coach(10, 20);
         
         
         train1.add(new Coach[] {coach, coach, coach});

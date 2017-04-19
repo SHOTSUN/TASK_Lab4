@@ -21,6 +21,17 @@ public class Train implements Iterable<Coach>{
         train = box;
     }
     
+    public int size() {
+        return train.size();
+    }
+    
+    public Train(Coach ... obj) {
+        train = new LinkedList();
+        for (Coach c : obj) {
+            train.add(c);
+        }
+    }
+    
     public Train(Coach coach){
         train = new LinkedList();
         train.add(coach);
