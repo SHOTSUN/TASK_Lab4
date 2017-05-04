@@ -1,9 +1,9 @@
 package by.BNTU.FITR.RAINSUN.entity.logic;
 
-import by.BNTU.FITR.RAINSUN.model.logic.Counter;
-import by.BNTU.FITR.RAINSUN.model.entity.trains.Coach;
-import by.BNTU.FITR.RAINSUN.model.entity.containers.Depo;
-import by.BNTU.FITR.RAINSUN.model.entity.containers.Train;
+import by.bntu1.fitr.rainsun.model.logic.Counter;
+import by.bntu1.fitr.rainsun.model.entity.trains.Coach;
+import by.bntu1.fitr.rainsun.model.entity.containers.Depo;
+import by.bntu1.fitr.rainsun.model.entity.containers.Train;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

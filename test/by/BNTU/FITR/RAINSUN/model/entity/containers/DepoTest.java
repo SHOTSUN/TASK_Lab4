@@ -1,7 +1,9 @@
 package by.BNTU.FITR.RAINSUN.model.entity.containers;
 
-import by.BNTU.FITR.RAINSUN.model.entity.trains.Coach;
-import by.BNTU.FITR.RAINSUN.model.exceptions.ExistenceException;
+import by.bntu1.fitr.rainsun.model.entity.containers.Train;
+import by.bntu1.fitr.rainsun.model.entity.containers.Depo;
+import by.bntu1.fitr.rainsun.model.entity.trains.Coach;
+import by.bntu1.fitr.rainsun.model.exceptions.NoElementException;
 import org.junit.After;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -34,7 +36,7 @@ public class DepoTest {
     }
 
     @Test
-    public void testGet() throws ExistenceException {
+    public void testGet() throws NoElementException {
         System.out.println("getTrain");
         Train train = new Train();
         instance.add(train);
