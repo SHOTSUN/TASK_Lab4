@@ -4,11 +4,12 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import by.bntu1.fitr.rainsun.model.exceptions.NoElementException;
+import java.io.Serializable;
 
 /**
  * @author SHOTSUN
  */
-public class Depo implements Iterable<Train> {
+public class Depo implements Iterable<Train>, Serializable {
 
     private List<Train> depo;
 
@@ -67,11 +68,12 @@ public class Depo implements Iterable<Train> {
 
     @Override
     public String toString() {
-        String result = "\n\tTrains:\n";
+        String result = "";
 
         for (Train train : depo) {
+            result += "#\n";
             result += train.toString();
-
+            
         }
 
         return result;

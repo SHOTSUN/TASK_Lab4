@@ -13,24 +13,24 @@ import java.util.Random;
  * @author Владислав
  */
 public class Creator {
-    
+
     public static void createDepo(Depo depo, int numbTrains) {
 
         Random myRandom = new Random();
         int minNum = 2;
         for (int i = 0; i < numbTrains; i++) {
             Train train = new Train();
-            
+
             Creator.create(train, minNum + myRandom.nextInt(15));
             depo.add(train);
-            
+
         }
     }
 
     public static void create(Train train, int n) {
         Random myRandom = new Random();
 
-        for (int i = 0; i < n-1; i++) {
+        for (int i = 0; i < n - 1; i++) {
             int buf = myRandom.nextInt(n);
             if (buf % 2 == 0) {
                 train.add(new Armored(15 + myRandom.nextInt(40), 10 + myRandom.nextInt(40), myRandom.nextInt(300)));
@@ -40,14 +40,5 @@ public class Creator {
 
         }
     }
-    
-    
-    public static void read() {
-        
-        try{
-            Writer w = new BufferedWriter(new FileWriter(null));
-        }
-        
-        
-    }
+
 }

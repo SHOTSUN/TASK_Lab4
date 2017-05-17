@@ -2,6 +2,7 @@
 package by.bntu1.fitr.rainsun.model.entity.containers;
 import by.bntu1.fitr.rainsun.model.entity.trains.Coach;
 import by.bntu1.fitr.rainsun.model.exceptions.NoElementException;
+import java.io.Serializable;
 import java.util.AbstractCollection;
 import java.util.Iterator;
 import java.util.LinkedList;
@@ -10,7 +11,7 @@ import java.util.List;
 /**
  * @author Владислав
  */
-public class Train implements Iterable<Coach>{
+public class Train implements Iterable<Coach>, Serializable{
 
     private final List<Coach> train;
 
@@ -65,15 +66,13 @@ public class Train implements Iterable<Coach>{
     @Override
     public String toString() {
         ////////////
-        int rez =0;
-        ///////////////
-        for(Coach c: train){
-            rez += c.getWeight();
-        }
+       // int rez =0;
+
+        
 
         StringBuilder showBag = new StringBuilder();
         
-        showBag.append("\n\t").append(rez).append(" - Train weight\n");
+        //showBag.append("\n\t").append(rez).append(" - Train weight\n");
             
         for (Coach thing : train) {
             showBag.append(thing.toString()).append("\n");

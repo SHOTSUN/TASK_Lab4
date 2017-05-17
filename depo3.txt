@@ -1,0 +1,19 @@
+#
+Simple coach-42,19,3
+Simple coach-52,39,3
+Armored coach-49,16,145
+Armored coach-47,45,184
+Armored coach-54,39,170
+Simple coach-41,48,2
+Armored coach-54,22,29
+Armored coach-26,25,137
+#
+Armored coach-26,26,73
+Simple coach-42,17,5
+Simple coach-36,43,3
+Armored coach-47,26,45
+#
+Simple coach-43,41,5
+Simple coach-50,37,3
+Simple coach-45,18,2
+

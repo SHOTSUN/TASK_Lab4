@@ -1,6 +1,8 @@
 package by.bntu1.fitr.rainsun.model.entity.trains;
 
-public class Coach implements Comparable<Coach> {
+import java.io.Serializable;
+
+public class Coach implements Comparable<Coach>, Serializable {
 
     private int weight;
     private int length;
@@ -51,7 +53,7 @@ public class Coach implements Comparable<Coach> {
     
     @Override
     public String toString() {
-        return "weight = " + this.weight + ", length = " + this.length + ";";
+        return this.weight + "," + this.length;
     }
     
     @Override
