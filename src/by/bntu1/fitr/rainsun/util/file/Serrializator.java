@@ -1,19 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package by.bntu1.fitr.rainsun.util.file;
 
 import java.io.*;
 import java.io.IOException;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
-/**
- *
- * @author Владислав
- */
 public class Serrializator {
-    
+
+    static final Logger log = LogManager.getLogger(FileManager.class);
+
     public static void saveInFile(Serializable object, String fileName) {
 
         try (ObjectOutputStream out = new ObjectOutputStream(
@@ -22,13 +17,13 @@ public class Serrializator {
             out.writeObject(object);
 
         } catch (IOException e) {
-          ///  exception
-          
+            log.error(e.toString());
+
         }
 
     }
-    
-    public static <T>T loadFromFile(String fileName) {
+
+    public static <T> T loadFromFile(String fileName) {
         T object = null;
 
         try (ObjectInputStream in = new ObjectInputStream(
@@ -37,10 +32,11 @@ public class Serrializator {
             object = (T) in.readObject();
 
         } catch (ClassNotFoundException | IOException e) {
-            //exception
+            log.error(e.toString());
 
         }
+
         return object;
     }
-    
+
 }

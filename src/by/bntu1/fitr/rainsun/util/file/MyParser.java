@@ -6,10 +6,11 @@ import by.bntu1.fitr.rainsun.model.entity.trains.Armored;
 import by.bntu1.fitr.rainsun.model.entity.trains.Simple;
 
 public class MyParser {
+    
 
     public static void parse(String msg, Depo depo) {
         String[] parts = msg.split("#");
-
+        
         for (String trains : parts) {
             Train train = new Train();
             String[] coaches = trains.split("\n");

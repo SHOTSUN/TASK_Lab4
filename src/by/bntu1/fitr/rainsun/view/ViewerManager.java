@@ -12,6 +12,8 @@ public class ViewerManager {
 
     static {
         ViewerManager.add("Console", new ConsoleViewer());
+        
+        ViewerManager.add("File", new FileViewer("filezz.txt"));
     }
 
     public static Viewer get(String key) {

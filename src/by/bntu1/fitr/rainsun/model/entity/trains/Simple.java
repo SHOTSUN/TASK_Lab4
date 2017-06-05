@@ -24,7 +24,7 @@ public class Simple extends Coach {
 
     @Override
     public String toString() {
-        return "Simple coach-" + super.toString() + "," + this.cargoType;
+        return CoachConst.COACH + " - " + CoachConst.SIMPLE + " (" + super.toString() + "," + this.cargoType + ")";
     }
 
 }

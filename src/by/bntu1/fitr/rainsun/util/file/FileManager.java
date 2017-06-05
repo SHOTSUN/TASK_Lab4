@@ -7,60 +7,62 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import by.bntu1.fitr.rainsun.model.exceptions.CreatingFileException;
-import by.bntu1.fitr.rainsun.model.exceptions.WritingFileException;
-import by.bntu1.fitr.rainsun.model.exceptions.NoFileException;
-import by.bntu1.fitr.rainsun.model.exceptions.ReadingFileException;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 public class FileManager {
 
+    static final Logger log = LogManager.getLogger(FileManager.class);
+
     public static void write(String fileName, String text) {
+        log.debug("Write to txt file");
         File file = new File(fileName);
         try {
             if (!file.exists()) {
                 file.createNewFile();
             }
+            throw new IOException();
         } catch (IOException e) {
-            throw new CreatingFileException(e.toString());
+            log.error(e.toString());
         }
 
-        try (BufferedWriter writer = new BufferedWriter(new FileWriter(file.getAbsoluteFile(), false))) {
+        try (BufferedWriter writer = new BufferedWriter(
+                new FileWriter(file.getAbsoluteFile(), false))) {
             writer.write(text);
+
             writer.newLine();
         } catch (IOException e) {
-            throw new WritingFileException(e.toString());
+            log.error(e.toString());
         }
     }
 
     public static String read(String fileName) {
+        log.debug("Read from txt file");
         StringBuilder sb = new StringBuilder();
         File file = new File(fileName);
 
-        try {
-            exists(file);
-
-        } catch (FileNotFoundException e) {
-            throw new NoFileException(e.toString());
-        }
+        exists(file);
 
         try (BufferedReader reader = new BufferedReader(
                 new FileReader(file.getAbsoluteFile()))) {
 
-            int c;
-            while ((c = reader.read()) != -1) {
-                sb.append((char) c);
+            int flag;
+
+            while ((flag = reader.read()) != -1) {
+                sb.append((char) flag);
             }
 
         } catch (IOException e) {
-            throw new ReadingFileException(e.toString());
+            log.error(e.toString());
         }
 
         return sb.toString();
     }
 
-    private static void exists(File file) throws FileNotFoundException {
+    private static void exists(File file) {
         if (!file.exists()) {
-            throw new FileNotFoundException(file.getName());
+            log.error(FileNotFoundException.class.toString());
         }
     }
 

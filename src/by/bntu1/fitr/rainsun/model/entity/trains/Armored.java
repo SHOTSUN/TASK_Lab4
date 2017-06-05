@@ -30,8 +30,8 @@ public class Armored extends Coach {
 
     @Override
     public String toString() {
-        return "Armored coach-" + super.toString() + ","
-                + this.armor;
+        return CoachConst.COACH + " - " + CoachConst.ARMORED + " (" + super.toString() + ","
+                + this.armor + ")";
     }
 
 }

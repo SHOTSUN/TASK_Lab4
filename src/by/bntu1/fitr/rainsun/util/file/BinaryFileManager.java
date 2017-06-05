@@ -1,9 +1,6 @@
 package by.bntu1.fitr.rainsun.util.file;
 
-import by.bntu1.fitr.rainsun.model.exceptions.CreatingFileException;
-import by.bntu1.fitr.rainsun.model.exceptions.NoFileException;
-import by.bntu1.fitr.rainsun.model.exceptions.ReadingFileException;
-import by.bntu1.fitr.rainsun.model.exceptions.WritingFileException;
+import static by.bntu1.fitr.rainsun.util.file.FileManager.log;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -11,10 +8,15 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 public class BinaryFileManager {
 
+    static final Logger log = LogManager.getLogger(FileManager.class);
+
     public static void write(String fileName, String text) {
+        log.debug("Write to bin file");
         File file = new File(fileName);
 
         try {
@@ -22,7 +24,8 @@ public class BinaryFileManager {
                 file.createNewFile();
             }
         } catch (IOException e) {
-            throw new CreatingFileException(e.toString());
+            log.error(e.toString());
+
         }
 
         try (BufferedOutputStream writer = new BufferedOutputStream(
@@ -30,39 +33,35 @@ public class BinaryFileManager {
             byte[] byffer = text.getBytes();
             writer.write(byffer);
         } catch (IOException e) {
-            throw new WritingFileException(e.toString());
+            log.error(e.toString());
         }
     }
 
     public static String read(String fileName) {
+        log.debug("Read from bin file");
         StringBuilder sb = new StringBuilder();
         File file = new File(fileName);
 
-        try {
-            exists(file);
-
-        } catch (FileNotFoundException e) {
-            throw new NoFileException(e.toString());
-        }
+        exists(file);
 
         try (BufferedInputStream reader = new BufferedInputStream(
                 new FileInputStream(file.getAbsoluteFile()))) {
 
-            int c;
-            while ((c = reader.read()) != -1) {
-                sb.append((char) c);
+            int flag;
+            while ((flag = reader.read()) != -1) {
+                sb.append((char) flag);
             }
 
         } catch (IOException e) {
-            throw new ReadingFileException(e.toString());
+            log.error(e.toString());
         }
 
         return sb.toString();
     }
 
-    private static void exists(File file) throws FileNotFoundException {
+    private static void exists(File file) {
         if (!file.exists()) {
-            throw new FileNotFoundException(file.getName());
+            log.error(FileNotFoundException.class.toString());
         }
     }
 

@@ -1,17 +1,21 @@
 
 package by.bntu1.fitr.rainsun.model.entity.containers;
 import by.bntu1.fitr.rainsun.model.entity.trains.Coach;
-import by.bntu1.fitr.rainsun.model.exceptions.NoElementException;
+import by.bntu1.fitr.rainsun.util.file.FileManager;
 import java.io.Serializable;
 import java.util.AbstractCollection;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * @author Владислав
  */
 public class Train implements Iterable<Coach>, Serializable{
+    
+    static final Logger log = LogManager.getLogger(FileManager.class);
 
     private final List<Coach> train;
 
@@ -49,13 +53,13 @@ public class Train implements Iterable<Coach>, Serializable{
         return train;
     }
     
-    public Coach getCoach(int index) throws NoElementException {
+    public Coach getCoach(int index){
         try{
             return train.get(index);
         }catch(IndexOutOfBoundsException e){
-            throw new NoElementException(e.toString());
+            log.error(e.toString());
         }
-        
+        return null;
     }
     
     @Override

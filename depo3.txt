@@ -1,19 +1,24 @@
 #
-Simple coach-42,19,3
-Simple coach-52,39,3
-Armored coach-49,16,145
-Armored coach-47,45,184
-Armored coach-54,39,170
-Simple coach-41,48,2
-Armored coach-54,22,29
-Armored coach-26,25,137
+Simple coach-26,25,3
+Simple coach-51,24,5
+Simple coach-27,41,3
+Simple coach-32,23,2
+TypeArmored coach-47,24,79
 #
-Armored coach-26,26,73
-Simple coach-42,17,5
-Simple coach-36,43,3
-Armored coach-47,26,45
+TypeArmored coach-35,38,122
+Simple coach-35,16,1
+TypeArmored coach-24,22,59
+TypeArmored coach-43,35,237
+Simple coach-53,19,4
+TypeArmored coach-40,12,48
+TypeArmored coach-36,45,22
+Simple coach-49,15,4
+Simple coach-36,47,2
+TypeArmored coach-50,29,145
+TypeArmored coach-41,29,17
+TypeArmored coach-22,24,295
 #
-Simple coach-43,41,5
-Simple coach-50,37,3
-Simple coach-45,18,2
+Simple coach-41,11,5
+TypeArmored coach-29,45,143
+TypeArmored coach-40,47,102
 

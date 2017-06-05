@@ -14,8 +14,10 @@ import java.util.Random;
  */
 public class Creator {
 
-    public static void createDepo(Depo depo, int numbTrains) {
+    public static Depo createDepo(int numbTrains) {
 
+        Depo depo = new Depo();
+        
         Random myRandom = new Random();
         int minNum = 2;
         for (int i = 0; i < numbTrains; i++) {
@@ -25,6 +27,7 @@ public class Creator {
             depo.add(train);
 
         }
+        return depo;
     }
 
     public static void create(Train train, int n) {

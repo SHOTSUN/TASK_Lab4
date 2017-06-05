@@ -1,16 +1,20 @@
 package by.bntu1.fitr.rainsun.model.entity.containers;
 
+import by.bntu1.fitr.rainsun.util.file.FileManager;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
-import by.bntu1.fitr.rainsun.model.exceptions.NoElementException;
 import java.io.Serializable;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 
 /**
  * @author SHOTSUN
  */
 public class Depo implements Iterable<Train>, Serializable {
 
+    static final Logger log = LogManager.getLogger(FileManager.class);
+    
     private List<Train> depo;
 
     public Depo() {
@@ -41,13 +45,13 @@ public class Depo implements Iterable<Train>, Serializable {
         return depo;
     }
     
-    public Train getTrain(int index) throws NoElementException {
+    public Train getTrain(int index){
         try{
             return depo.get(index);
         }catch(IndexOutOfBoundsException e){
-            throw new NoElementException(e.toString());
+            log.error(e.toString());
         }
-        
+        return null;
     }
 
     public void add(Train... trains) {

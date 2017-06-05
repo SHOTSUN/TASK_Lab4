@@ -1,0 +1,55 @@
+11:00:31,925 DEBUG main FileManager:write:19 - Write to txt file
+11:00:31,925 ERROR main FileManager:write:27 - java.io.IOException
+11:00:31,925 DEBUG main FileManager:write:19 - Write to txt file
+11:00:31,925 ERROR main FileManager:write:27 - java.io.IOException
+11:00:31,941 DEBUG main FileManager:read:41 - Read from txt file
+06:59:47,828 DEBUG main FileManager:write:19 - Write to txt file
+06:59:47,844 ERROR main FileManager:write:27 - java.io.IOException
+06:59:47,844 DEBUG main FileManager:write:19 - Write to txt file
+06:59:47,844 ERROR main FileManager:write:27 - java.io.IOException
+06:59:47,875 DEBUG main FileManager:read:41 - Read from txt file
+06:59:52,090 DEBUG main FileManager:write:19 - Write to txt file
+06:59:52,106 ERROR main FileManager:write:27 - java.io.IOException
+06:59:52,106 DEBUG main FileManager:write:19 - Write to txt file
+06:59:52,106 ERROR main FileManager:write:27 - java.io.IOException
+06:59:52,106 DEBUG main FileManager:read:41 - Read from txt file
+07:22:26,893 DEBUG main FileManager:write:19 - Write to txt file
+07:22:26,895 ERROR main FileManager:write:27 - java.io.IOException
+07:22:26,897 DEBUG main FileManager:write:19 - Write to txt file
+07:22:26,897 ERROR main FileManager:write:27 - java.io.IOException
+07:22:26,902 DEBUG main FileManager:read:41 - Read from txt file
+07:23:19,064 DEBUG main FileManager:write:19 - Write to txt file
+07:23:19,066 ERROR main FileManager:write:27 - java.io.IOException
+07:23:19,068 DEBUG main FileManager:write:19 - Write to txt file
+07:23:19,068 ERROR main FileManager:write:27 - java.io.IOException
+07:23:19,071 DEBUG main FileManager:read:41 - Read from txt file
+07:24:15,936 DEBUG main FileManager:write:19 - Write to txt file
+07:24:15,939 ERROR main FileManager:write:27 - java.io.IOException
+07:24:15,942 DEBUG main FileManager:write:19 - Write to txt file
+07:24:15,942 ERROR main FileManager:write:27 - java.io.IOException
+07:24:15,946 DEBUG main FileManager:read:41 - Read from txt file
+07:24:19,678 DEBUG main FileManager:write:19 - Write to txt file
+07:24:19,681 ERROR main FileManager:write:27 - java.io.IOException
+07:24:19,684 DEBUG main FileManager:write:19 - Write to txt file
+07:24:19,684 ERROR main FileManager:write:27 - java.io.IOException
+07:24:19,688 DEBUG main FileManager:read:41 - Read from txt file
+07:24:20,969 DEBUG main FileManager:write:19 - Write to txt file
+07:24:20,971 ERROR main FileManager:write:27 - java.io.IOException
+07:24:20,975 DEBUG main FileManager:write:19 - Write to txt file
+07:24:20,976 ERROR main FileManager:write:27 - java.io.IOException
+07:24:20,979 DEBUG main FileManager:read:41 - Read from txt file
+07:25:20,385 DEBUG main FileManager:write:19 - Write to txt file
+07:25:20,387 ERROR main FileManager:write:27 - java.io.IOException
+07:25:20,390 DEBUG main FileManager:write:19 - Write to txt file
+07:25:20,391 ERROR main FileManager:write:27 - java.io.IOException
+07:25:20,394 DEBUG main FileManager:read:41 - Read from txt file
+07:25:22,542 DEBUG main FileManager:write:19 - Write to txt file
+07:25:22,544 ERROR main FileManager:write:27 - java.io.IOException
+07:25:22,547 DEBUG main FileManager:write:19 - Write to txt file
+07:25:22,547 ERROR main FileManager:write:27 - java.io.IOException
+07:25:22,551 DEBUG main FileManager:read:41 - Read from txt file
+07:25:24,092 DEBUG main FileManager:write:19 - Write to txt file
+07:25:24,095 ERROR main FileManager:write:27 - java.io.IOException
+07:25:24,098 DEBUG main FileManager:write:19 - Write to txt file
+07:25:24,098 ERROR main FileManager:write:27 - java.io.IOException
+07:25:24,102 DEBUG main FileManager:read:41 - Read from txt file
